@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "marine-reports",
+  "private_key_id": "32612c5bffe612fd2fd7dc2ee23685726f5f106f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDJuuL9fPsCrl0b\nU3X6IWNay++YuB7lKuF+H48r8gj41i1XkE9d1phz/2udeOogNF5sbsnL0frS2Jpc\noq03WYpzW0rBR2A5ZUXzrOh5koiTEHPZ2aM4biRhisup3VmJduE0DWZXR9lM9LVR\nA8AE9cpcXpW37nMcoLLXyr3Zt0ad1Sltu8+qDYlMMhiHuP23Y0AI1fx2iP7hPgy1\nqai/GKODDHs84g5MUAr4yV2mvXoxyIue5atZFgqMGYsJ8RUehAXiYtlmEfB/8xww\nhKguCwh1zU67qiGpNeksECiQ6KMhhoorZMKq3S86vSY2mDHtonxGNBIV6N8LN1D7\ndmB0uvHhAgMBAAECgf9nXfPh9UtJhxRTuY3CVZ7AxQRIj6UvwwE4d0Ni6T/frHTK\nDDrJgqSBC72WOyxSGYN+BxGFTFs8nvC5zEGlvaP2ktjYoOeVgWc5WBLnTfEy1O4I\nED+qiAWXAF/LnThmpRulvcKrBo3k+PR6RsmlwQGoGG9EiFKZC17uDrJT/62Xltv2\nv3zjzyyIjJqw3T2V7bVHI2EQRrEe9MkeG59U2evTFsCBdl29ploku+mvcsm/fGu3\nxNPCLnbkP5zbde3NGUWi+ocwZYV4lHQ16BxygBNy4Afra/ePyeJIr7sMWdyDKKob\n4jgcRweYddMJyvegppd7D13XR3I+SPdZ3g/YaoECgYEA7BYY4zq6l7yQ6GiZpLx0\nP0ttqp2JgIDyx8wIrZjuwDWwOpqNfl175GQkoNKEcI4pPhkaiYNgoCNAWqdEAp4E\nS2Zdbdah+wr+gy18N4CRX281Qq5hxWuC/s9FNaBNt/xQNMi/vMjm33PcWlrTq1dw\nDAEfhC/GV6rvUmyNs1QvfoECgYEA2r7ru9gmE08Twadyldc2EW75YljY8I9zzd2e\netSTJSEQj7tNeTxaCZaw8mkJLLWQ8lYouBzNO5eTRR4gaHL8xSUdT2xf/yXXc03p\nVuvpOEKOvEvTLtaunD1jyvFCR1F9TT1O8N/LJP0dVDoG6JrODd23pR/uDHclnbsp\n+sEAg2ECgYEAvOKJEvQf6drSTT+y/ZxRnXppyYG1S3zfwX66yrl6+4l478pLvnho\n8Tg2Hf2QPMVgtfA7zR2xpy3NBTqiLT3jzbeetIxumH4ZVzaDFZzlsmc1Q55lVyBH\ndDq88sTIqZVTTof278IFBW6bNCdLBuE0IkabwpS+qdF3HIkBbiLCxQECgYEAuF0Z\nyiSPUs7fU+SRiwDsLR1fSyifD4GYlPYo0FXB/xUzJDE1Ru065cIAOQ+WD/ynwdgk\nUajUwVkrYqHVprLjoDV70qkA78cxI5mTBROoaSaPrtwpjdybJkwHg9B7kCh6d1Mo\n6ZN1YCOFSKvvjrSK3tz0H1QeCpuRNLO+2f05NYECgYEAjqvxCHg0pDXsDW7RsBef\n5o1mzrJ6aBaxDUFolZ2FqVAI4lPxS5EO8s4nei1ui9hhrAs2HaiMQPE+LGWjy9EU\n5qnLiYb9xoYE4Ro1axfyiinUuZvSGr2YK19drFM/nuin3QBjL9DXVskpGCTlYPiu\neHk1A27ZzBwHGOnU7vWGWjU=\n-----END PRIVATE KEY-----\n",
+  "client_email": "marinereports@marine-reports.iam.gserviceaccount.com",
+  "client_id": "107888493690590880418",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/marinereports%40marine-reports.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
