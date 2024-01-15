@@ -1,0 +1,111 @@
+:root {
+    --background: #ECF0F4;
+    --white: white;
+    --gray-light: #FAFBFC;
+    --gray-borders: #ECF1F4;
+    --gray-dark: #AEB7C2;
+    --primary: #4D78C9;
+}
+
+/* CSS reset */
+*, *:before, *:after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background);
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.discussion {
+    background-color: var(--white);
+    border-radius: 8px;
+    margin: 16px;
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.discussion__header {
+    background-color: var(--gray-light);
+    border-bottom: var(--gray-borders);
+    display: flex;
+    gap: 8px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    padding: 16px;
+    width: 100%;
+}
+
+.discussion__header textarea {
+    border: 1px solid var(--gray-borders);
+    padding: 8px;
+    border-radius: 4px;
+    height: 48px;
+    transition: height 0.3s ease-in-out;
+    resize: none;
+    width: 100%;
+}
+
+.discussion__header textarea:focus {
+    outline: none;
+    height: 80px;
+    border: 1px solid var(--primary);
+}
+
+.comment {
+    display: flex;
+    padding: 16px;
+    min-height: 95px;
+    gap: 8px;
+    border-bottom: 1px solid var(--gray-borders);
+}
+
+.newcomment__toolbar {
+    justify-content: end;
+    display: flex;
+    gap: 8px;
+    padding: 4px;
+}
+
+.newcomment__toolbar button {
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.button--primary {
+    background-color: var(--primary);
+    color: var(--white);
+    min-width: 80px;
+}
+
+.comment__text {
+    font-size: 12px;
+}
+
+.comment__author {
+    font-size: 14px;
+}
+
+.comment__date {
+    font-size: 12px;
+    margin-left: 4px;
+    color: var(--gray-dark);
+}
