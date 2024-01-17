@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO credentials</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+<body>
+    <form id="ngoForm">
+        <h2>NGO Credentials Form</h2>
+
+        <label for="ngoName">NGO Name:</label>
+        <input type="text" id="ngoName" required>
+
+        <label for="registrationDocs">Registration Documents(PDF):</label>
+        <!-- <textarea id="registrationDocs" rows="4" required></textarea> -->
+        <input type="file" id="registrationDocs" accept=".pdf" onchange="displayFileName()" required>
+        <div id="uploadedFile"></div>
+
+        <label for="missionObjectives">Mission and Objectives:</label>
+        <textarea id="missionObjectives" rows="4" required></textarea>
+
+        <label for="projectReports">Previous Project Reports:</label>
+        <textarea id="projectReports" rows="4" required></textarea>
+
+        <label for="financialStatements">Financial Statements (YEAR-WISE):</label>
+        <!-- <textarea id="financialStatements" rows="4" required></textarea> -->
+        <div id="financialStatementsContainer"></div>
+        <button type="button" onclick="addFinancialStatementYear()">Add Another Financial Year</button>
+
+        <label for="budgetProposal">Budget Proposal:</label>
+        <textarea id="budgetProposal" rows="4" required></textarea>
+
+        <label for="monitoringPlan">Monitoring and Evaluation Plan:</label>
+        <textarea id="monitoringPlan" rows="4" required></textarea>
+
+        <label for="timeline">Timeline for Project Execution:</label>
+        <textarea id="timeline" rows="4" required></textarea>
+
+        <label for="references">References and Recommendations:</label>
+        <textarea id="references" rows="4" required></textarea>
+
+        <label for="communicationPlan">Communication Plan:</label>
+        <textarea id="communicationPlan" rows="4" required></textarea>
+
+        <label for="transparencyPolicies">Transparency and Accountability Policies:</label>
+        <textarea id="transparencyPolicies" rows="4" required></textarea>
+
+        <label for="legalCompliance">Legal Compliance:</label>
+        <textarea id="legalCompliance" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="display-credentials">
+        <h2>NGO Credentials</h2>
+        <div id="credentials-container"></div>
+    </div>
+
+
+ <script src="try.js"></script>   
+</body>
+</html>
