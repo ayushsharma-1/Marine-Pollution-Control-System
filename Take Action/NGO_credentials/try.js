@@ -1,5 +1,4 @@
 function submitForm() {
-    // Get values from the form
     const ngoName = document.getElementById('ngoName').value;
     const registrationDocs = document.getElementById('registrationDocs').value;
     const missionObjectives = document.getElementById('missionObjectives').value;
@@ -12,8 +11,6 @@ function submitForm() {
     const communicationPlan = document.getElementById('communicationPlan').value;
     const transparencyPolicies = document.getElementById('transparencyPolicies').value;
     const legalCompliance = document.getElementById('legalCompliance').value;
-
-    // Display values in a div
     const credentialsContainer = document.getElementById('credentials-container');
     credentialsContainer.innerHTML = `
         <p><strong>NGO Name:</strong> ${ngoName}</p>
@@ -30,7 +27,7 @@ function submitForm() {
         <p><strong>Legal Compliance:</strong> ${legalCompliance}</p>
     `;
 
-    // Display the credentials section
+    
     const displayCredentials = document.getElementById('display-credentials');
     displayCredentials.style.display = 'block';
 }
@@ -44,10 +41,10 @@ function displayFileName(inputId) {
 
 function addFinancialStatementYear() {
     const container = document.getElementById('financialStatementsContainer');
-    const year = new Date().getFullYear(); // Get the current year
+    const year = new Date().getFullYear(); 
     const inputId = `financialStatement_${year}`;
 
-    // Create a new file input for the financial statement year
+    
     const label = document.createElement('label');
     label.setAttribute('for', inputId);
     label.textContent = `Financial Statement ${year} (PDF):`;
@@ -67,11 +64,8 @@ function addFinancialStatementYear() {
 }
 
 function submitForm() {
-    // Get values from the form
     const ngoName = document.getElementById('ngoName').value;
-    // Add more fields as needed
-
-    // Display values in a div
+    
     const credentialsContainer = document.getElementById('credentials-container');
     credentialsContainer.innerHTML = `
         <p><strong>NGO Name:</strong> ${ngoName}</p>
@@ -81,7 +75,6 @@ function submitForm() {
         <div class="uploaded-file" id="uploadedFile_registrationDocs"></div>
     `;
 
-    // Display the financial statements information
     const financialStatementsContainer = document.getElementById('financialStatementsContainer');
     const financialStatementInputs = financialStatementsContainer.querySelectorAll('input[type="file"]');
     financialStatementInputs.forEach(input => {
@@ -92,10 +85,9 @@ function submitForm() {
         financialStatementsContainer.appendChild(uploadedFileDiv);
     });
 
-    // Display the credentials section
+    
     const displayCredentials = document.getElementById('display-credentials');
     displayCredentials.style.display = 'block';
 }
 
-// Add initial financial statement year input
 addFinancialStatementYear();
