@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="loginForm">
+        <div class="centering">
+          <form class="my-form">
+            <div class="login-welcome-row">
+                <h1>LogIn</h1>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input
+                  aria-label="Email"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <img alt="Email Icon" class="input-icon" title="Email Icon" src="./assets/email.svg" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input id="password"
+                type="password"
+                aria-label="Password"
+                name="password"
+                title="Minimum 6 characters at least 1 Alphabet and 1 Number"
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+                required placeholder="Password" required />
+                <button type="button" title="Reveal Password" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <mask id="eye-open">
+                            <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12V20H12H1V12Z" fill="white" stroke="white"
+                              stroke-width="1.5" stroke-linejoin="round" />
+                          </mask>
+                          <mask id="eye-closed">
+                            <path d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12V20H12H1V12Z" fill="#D9D9D9" />
+                          </mask>
+                        </defs>
+                        <path class="lid lid--upper" d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12" stroke="white" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                        <path class="lid lid--lower" d="M1 12C1 12 5 20 12 20C19 20 23 12 23 12" stroke="white"
+                          stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <g mask="url(#eye-open)">
+                          <g class="eye">
+                            <circle cy="12" cx="12" r="4" fill="white" stroke="white" stroke-width="2" /> <!-- Set fill and stroke to white -->
+                            <circle cy="11" cx="13" r="1" fill="black" />
+                          </g>
+                        </g>
+                      </svg>
+                      
+                  <span class="sr-only">Reveal</span>
+                </button>
+              </div>
+          </form>
+        </div>
+        <div>
+            <button class="bubbly-button">LogIn</button>
+        </div>
+        <div class="my-form__row">
+            <span>Forget your password? </span>
+            <a href="./reset-pass.html" title="Reset Password">Reset Password</a>
+          </div>
+          <div class="my-form__row2">
+            <span>If You are a NGO</span>
+            <a href="Ngo-register.html" title="Register Here">Register Here</a>
+          </div>
+          <div class="my-form__signup">
+            <a type="button" href="singhup.html" title="Create Account"
+              >Create Account</a>
+          </div>
+          <span class="social-media-buttons">
+          <span class="social-media-button">
+            <img
+                alt="Google"
+                src="./assets/google.svg"
+            />
+        </span>
+        
+    </div>
+
+
+<script src="./login.js"></script>      
+</body>
+</html>
