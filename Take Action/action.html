@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Incident Report</title>
     <link rel="stylesheet" href="./action.css" />
-  </head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wAa9OYZjUFgisXP6vIez963OflUcq2Q&libraries=places&callback=initMap"></script>
+    </head>
 
   <body>
     <div id="video-background">
@@ -68,13 +69,17 @@
       <div class="form-field">
         <label for="location-pollution">Location of Pollution:</label>
         <input
-          type="text"
-          id="location-pollution"
-          name="location-pollution"
-          placeholder="Location"
-          required
+            type="text"
+            id="location-pollution"
+            name="location-pollution"
+            placeholder="Location"
+            required
+            autocomplete="on"
+            onchange="showLocationOnMap()"
         />
-      </div>
+    </div>
+    <div id="map"></div>
+
 
       <div class="form-field">
         <label for="pollution">Type of Pollution:</label>
@@ -130,12 +135,8 @@
         </svg>
       </button>
     </form>
-    <img id="uploaded-image" src="#" alt="" />
-        </div>
-        <input type="file" id="upload-input" accept="image/*" onchange="displayImage()" />
-        <label for="upload-input" id="upload-label">Upload Image</label>
-</div>
-
+   
     <script src="action.js"></script>
+
   </body>
 </html>

@@ -58,9 +58,9 @@ select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    box-shadow: 0 0 20px rgba(135, 206, 250, 0.5), /* Lighter Marine Blue */
-    0 0 40px rgba(135, 206, 250, 0.3), /* Even lighter Marine Blue */
-    0 0 60px rgba(135, 206, 250, 0.2); /* Calm Light Blue */
+    box-shadow: 0 0 20px rgba(135, 206, 250, 0.5),
+    0 0 40px rgba(135, 206, 250, 0.3), 
+    0 0 60px rgba(135, 206, 250, 0.2); 
     border-radius: 10px;
     opacity: .7;
 }
@@ -114,8 +114,8 @@ select {
     gap: 8px;
     font-weight: 600;
     cursor: pointer;
-    color: #ffffff; /* White text color */
-    background: linear-gradient(to left, #007acc, #00bfff); /* Marine theme gradient */
+    color: #ffffff; 
+    background: linear-gradient(to left, #007acc, #00bfff); 
     letter-spacing: 0.7px;
 }
 
@@ -146,10 +146,10 @@ select {
     font-weight: 500;
     font-size: 17px;
     padding: 0.8em 1.5em 0.8em 1.2em;
-    color: #ffffff; /* White text color */
-    background: linear-gradient(0deg, #00bfff 0%, #007acc 100%); /* Marine theme gradient */
+    color: #ffffff; 
+    background: linear-gradient(0deg, #00bfff 0%, #007acc 100%); 
     border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em rgba(0, 123, 255, 0.7); /* Marine theme shadow */
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(0, 123, 255, 0.7);
     letter-spacing: 0.05em;
     border-radius: 20em;
 }
@@ -159,10 +159,24 @@ select {
 }
 
 .upload-button:hover {
-    box-shadow: 0 0.5em 1.5em -0.5em rgba(0, 123, 255, 0.7); /* Slightly darker shadow on hover */
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(0, 123, 255, 0.7); 
 }
 
 .upload-button:active {
-    box-shadow: 0 0.3em 1em -0.5em rgba(0, 123, 255, 0.7); /* Darker shadow on active */
+    box-shadow: 0 0.3em 1em -0.5em rgba(0, 123, 255, 0.7); 
 }
 
+#map {
+    width: 50%;
+    height: 400px; 
+    margin-top: 20px; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(135, 206, 250, 0.5), 
+        0 0 40px rgba(135, 206, 250, 0.3), 
+        0 0 60px rgba(135, 206, 250, 0.2); 
+}
+
+#map img {
+    max-width: none;
+}
