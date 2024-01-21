@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident - SeaGuardian</title>
+
+    <link rel="stylesheet" href="takeaction.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6wAa9OYZjUFgisXP6vIez963OflUcq2Q&libraries=places&callback=initMap"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="assets/logo 1.png" alt=""></a>
+        </div>
+        <ul>
+            <li><a href="#" onmouseover="showContent()" onmouseout="hideContent()" id="hoverButton" class="active">About
+                    Us</a></li>
+            <li><a href="#">Our Program</a></li>
+            <li><a href="#">The Latest</a></li>
+        </ul>
+        <div class="donate">
+            <li><a href="#">Take Action</a></li>
+            <button class="shadow__btn login">
+                <a href="login.html">Login</a>
+            </button>
+        </div>
+    </header>
+    <!-- <div class="bg">
+        <img src="./assets/bea9351502d2e6f54ff84e9f65be8c86.jpg" alt="" srcset="">
+    </div> -->
+
+    <main>
+        <div class="container1">
+            <form id="report-form">
+                <h1 class="text-center1">Report an Incident</h1>
+          
+                <div class="form-field">
+                  <label for="name"> Your Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+          
+                <div class="form-field">
+                  <label for="date">Date:</label>
+                  <input type="date" id="date" placeholder="Date" name="date" required />
+                </div>
+          
+                <div class="form-field">
+                  <label for="address">Your Address:</label>
+                  <input
+                    type="text"
+                    placeholder="Your Address"
+                    id="address"
+                    name="address"
+                    required
+                  />
+                </div>
+          
+                <div class="form-field">
+                  <label for="contact">Contact Number:</label>
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    placeholder="Contact Number"
+                    required
+                  />
+                </div>
+          
+                <div class="form-field">
+                  <label for="email">Email Address:</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+          
+                <div class="form-field">
+                  <label for="location-pollution">Location of Pollution:</label>
+                  <input
+                      type="text"
+                      id="location-pollution"
+                      name="location-pollution"
+                      placeholder="Location"
+                      required
+                      autocomplete="on"
+                      onchange="showLocationOnMap()"
+                  />
+              </div>
+              <div id="map"></div>
+          
+          
+                <div class="form-field">
+                  <label for="pollution">Type of Pollution:</label>
+                  <select id="pollution" name="pollution" required>
+                    <option value=""></option>
+                    <option value="oil_spill">Oil Spill</option>
+                    <option value="industrial_waste">Industrial Waste</option>
+                    <option value="sewage_discharge">Sewage Discharge</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="pollution">Area of Pollution:</label>
+                  <select id="pollution" name="pollution" required>
+                    <option value=""></option>
+                    <option value="pond">Pond</option>
+                    <option value="River">River</option>
+                    <option value="Sea">Sea</option>
+                    <option value="Canal">Canal</option>
+                    <option value="Ocean">Ocean</option>
+                  </select>
+                </div>
+          
+                <div class="form-field">
+                  <label for="pollution">Polybags Present:</label>
+                  <select id="pollution" name="pollution" required>
+                    <option value=""></option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <label for="image-input" class="upload-button">
+                  <svg
+                    viewBox="0 0 640 512"
+                    fill="white"
+                    height="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg>Choose Image</label>
+                      <input type="file" accept="image/*" capture="camera" id="image-input" class="form-field1">
+                <div id="image-container">
+                  <img id="uploaded-image" alt="Uploaded Image" />
+                </div>
+                <button type="submit" class="submitBtn" onclick="submitForm()">
+                  Submit<svg
+                    fill="white"
+                    viewBox="0 0 448 512"
+                    height="1em"
+                    class="arrow"
+                  >
+                    <path
+                      d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                    ></path>
+                  </svg>
+                </button>
+              </form>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <section class="footer-top">
+                <div class="footer-headline">
+                    <h2>Donate to make Pollution Free Marine</h2>
+                    <p>
+                        Stay up to date with our news and articles
+                    </p>
+                </div>
+                <div class="footer-subscribe">
+                    <button id="donate">
+                        Donate
+                    </button>
+                </div>
+            </section>
+            <div class="footer-columns">
+                <section class="footer-logo">
+                    <img src="assets/logo 1.png" alt="SeaGuardian">
+                </section>
+                <section>
+                    <h3>Product</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="API">API</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Documentation">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Release Notes">Release Notes</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Status">Status</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Resources</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="Support">Support</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Sitemap">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Newsletter">Newsletter</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Help Centre">Help Centre</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Investor">Investor</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="About Us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Careers">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Press">Press</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Legal</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="Terms and services">
+                                Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Privacy Policy">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cookies">
+                                Cookies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Licenses">
+                                Licenses
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cookies">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <small>© SeaGuardian <span id="year"></span>, All rights reserved</small>
+                <span class='social-links'>
+                    <a href="#" title="Instagram">
+                        <img src="assets/instagram.svg" alt='Instagram'>
+                    </a>
+                    <a href="#" title="Linkedin">
+                        <img src="assets/linkedin.svg" alt='Linkedin'>
+                    </a>
+                    <a href="#" title="Twitter">
+                        <img src="assets/twitter.svg" alt='Twitter'>
+                    </a>
+                    <a href="#" title="Youtube">
+                        <img src="assets/youtube.svg" alt='YouTube'>
+                    </a>
+                    <a href="#" title="GitHub">
+                        <img src="assets/github.svg" alt='GitHub'>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="./action.js"></script>
+</body>
+
+
+</html>
