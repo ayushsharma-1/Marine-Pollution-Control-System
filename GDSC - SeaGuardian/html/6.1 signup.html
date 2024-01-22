@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/css/6. login.css">
+</head>
+<body>
+<div id="signupForm">
+    <div class="centering">
+      <form class="my-form">
+        <div class="login-welcome-row">
+          <h1>Sign Up</h1>
+        </div>
+        <!-- Add your signup form fields here -->
+        <div class="form-group">
+          <label for="signup-email">Email:</label>
+          <input
+            aria-label="Email"
+            type="email"
+            id="signup-email"
+            name="signup-email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+            <label for="Username">Username:</label>
+            <input
+              aria-label="Username"
+              type="Username"
+              id="Username"
+              name="Username"
+              placeholder="Your Username"
+              required
+            />
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password:</label>
+          <input id="signup-password" 
+          title="Minimum 6 characters, at least 1 Alphabet, and 1 Number"
+          type="password"
+                  aria-label="Confirm Password"
+                  name="confirmPassword"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"type="password" placeholder="Password:" required />
+        </div>
+        <div class="form-group">
+            <label for="password"> Confirm Password:</label>
+            <input
+              id="confirmPassword"
+              type="password"
+              aria-label="Confirm Password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              title="Minimum 6 characters, at least 1 Alphabet, and 1 Number"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
+              required
+              oninput="checkPasswordMatch();"
+            />
+        </div>
+      </form>
+    </div>
+    <div>
+      <button class="bubbly-button" onclick="submitSignupForm()">Sign Up</button>
+    </div>
+    <div class="my-form__row2">
+        <span>If You are a NGO</span>
+        <a href="/html/6.2 Ngo-register.html" title="Reset Password">Register Here</a>
+      </div>
+</div>
+
+<footer>
+  <a href="/html/1. home.html">Go to Home</a>
+</footer>
+
+<script src="/js/4. login.js"></script>
+</body>
+</html>

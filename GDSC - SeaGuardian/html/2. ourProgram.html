@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Program - SeaGuardian</title>
+  <link rel="stylesheet" href="/css/2. ourProgram.css" />
+  <link rel="stylesheet" href="/css/blog.css">
+  <script src="/js/2.1 purify.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="/html/1. home.html"><img src="/assets/logo 1.png" alt=""></a>
+    </div>
+    <ul>
+      <li><a href="/html/1. home.html" onmouseover="showContent()" onmouseout="hideContent()" id="hoverButton"
+          class="active">About Us</a></li>
+      <li><a href="/html/2. ourProgram.html">Our Program</a></li>
+      <li><a href="/html/3. action.html">Take Action</a></li>
+    </ul>
+    <div class="donate">
+      <li><a href="/html/4. theLatest.html">The Latest</a></li>
+      <a href="/html/5. donate.html">
+        <button class="shadow__btn" style="color: black;">
+          Donate
+        </button>
+      </a>
+      <a href="/html/6. login.html">
+        <button class="shadow__btn login">
+          Login
+        </button>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1> NGO's List working on Marine Cleaness</h1>
+    </div>
+    <div id="state-list">
+      <div class="arrow" onclick="scrollStateList('left')">&#9665;</div>
+      <ul id="state-list-container">
+        <li onclick="selectState('Gujarat')" data-state="Gujarat">Gujarat<img src="/assets/images-removebg-preview.png"
+            alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('Maharashtra')" data-state="Maharashtra">Maharashtra<img src="/assets/maharashtra.png"
+            alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('Goa')" data-state="Goa">Goa<img src="/assets/images-removebg-preview (1).png"
+            alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('Karnatka')" data-state="Karnatka">Karnatka<img src="/assets/karnatka.png"
+            alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('Kerala')" data-state="Kerala">Kerala<img src="/assets/kerala.png" alt="Gujarat Map"
+            width="110" height="110" /></li>
+        <li onclick="selectState('TamilNadu')" data-state="TamilNadu">Tamil <br> Nadu<img src="/assets/tamilnadu.png"
+            alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('AndhraPradesh')" data-state="AndhraPradesh">Andhra <br> Pradesh<img
+            src="/assets/andhrapradesh.png" alt="Gujarat Map" width="110" height="110" /></li>
+        <li onclick="selectState('Odisha')" data-state="Odisha">Odisha<img src="/assets/odisha.png" alt="Gujarat Map"
+            width="110" height="110" /></li>
+        <li onclick="selectState('WestBengal')" data-state="WestBengal">West <br> Bengal<img
+            src="/assets/westbengal.png" alt="Gujarat Map" width="110" height="110" /></li>
+      </ul>
+      <div class="arrow" onclick="scrollStateList('right')">&#9655;</div>
+    </div>
+
+
+    <div id="ngo-table">
+      <h2>NGOs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Website</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="ngo-list">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="discussion">
+      <div class="discussion__header">
+        <div class="authed-user">
+        </div>
+        <form id="newcomment__form">
+          <textarea tabindex="1" cols="150" rows="4" minlength="5" required placeholder="Write a comment"></textarea>
+          <div class="newcomment__toolbar">
+            <button id="reset-button" class="button--secondary" tabindex="3" type="button">
+              Reset
+            </button>
+            <button id="confirm-button" class="button--primary" tabindex="2" type="submit">
+              Comment
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="discussion__comments">
+        <!-- will be generated -->
+      </div>
+    </div>
+    <script src="/js/2. blog.js"></script>
+  </main>
+
+  <footer>
+    <div class="footer-wrapper">
+      <section class="footer-top">
+        <div class="footer-headline">
+          <h2>Donate to make Pollution Free Marine</h2>
+          <p>
+            Stay up to date with our news and articles
+          </p>
+        </div>
+        <div class="footer-subscribe">
+          <a href="/html/5. donate.html"><button id="donate">
+              Donate
+            </button></a>
+        </div>
+      </section>
+      <div class="footer-columns">
+        <section class="footer-logo">
+          <img src="/assets/logo 1.png" alt="SeaGuardian">
+        </section>
+        <section>
+          <h3>Product</h3>
+          <ul>
+            <li>
+              <a href="#" title="API">API</a>
+            </li>
+            <li>
+              <a href="#" title="Pricing">Pricing</a>
+            </li>
+            <li>
+              <a href="#" title="Documentation">Documentation</a>
+            </li>
+            <li>
+              <a href="#" title="Release Notes">Release Notes</a>
+            </li>
+            <li>
+              <a href="#" title="Status">Status</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Resources</h3>
+          <ul>
+            <li>
+              <a href="#" title="Support">Support</a>
+            </li>
+            <li>
+              <a href="#" title="Sitemap">Sitemap</a>
+            </li>
+            <li>
+              <a href="#" title="Newsletter">Newsletter</a>
+            </li>
+            <li>
+              <a href="#" title="Help Centre">Help Centre</a>
+            </li>
+            <li>
+              <a href="#" title="Investor">Investor</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="#" title="About Us">About Us</a>
+            </li>
+            <li>
+              <a href="#" title="Blog">Blog</a>
+            </li>
+            <li>
+              <a href="#" title="Careers">Careers</a>
+            </li>
+            <li>
+              <a href="#" title="Press">Press</a>
+            </li>
+            <li>
+              <a href="#" title="Contact">Contact</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Legal</h3>
+          <ul>
+            <li>
+              <a href="#" title="Terms and services">
+                Terms
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Privacy Policy">
+                Privacy
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Cookies">
+                Cookies
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Licenses">
+                Licenses
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Cookies">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="footer-bottom">
+        <small>© SeaGuardian <span id="year"></span>, All rights reserved</small>
+        <span class='social-links'>
+          <a href="#" title="Instagram">
+            <img src="/assets/instagram.svg" alt='Instagram'>
+          </a>
+          <a href="#" title="Linkedin">
+            <img src="/assets/linkedin.svg" alt='Linkedin'>
+          </a>
+          <a href="#" title="Twitter">
+            <img src="/assets/twitter.svg" alt='Twitter'>
+          </a>
+          <a href="#" title="Youtube">
+            <img src="/assets/youtube.svg" alt='YouTube'>
+          </a>
+          <a href="#" title="GitHub">
+            <img src="/assets/github.svg" alt='GitHub'>
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/1. ourProgram.js"></script>
+</body>
+
+</html>

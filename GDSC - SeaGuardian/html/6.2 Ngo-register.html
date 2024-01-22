@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Registration</title>
+    <link rel="stylesheet" href="/css/6. login.css">
+</head>
+<body>
+<div id="ngoRegistrationForm">
+    <div class="centering">
+        <form class="my-form">
+            <div class="login-welcome-row">
+                <h1>NGO Registration</h1>
+            </div>
+            <!-- NGO Registration Form Fields -->
+            <div class="form-group">
+                <label for="ngo-name">NGO Name:</label>
+                <input
+                    aria-label="NGO Name"
+                    type="text"
+                    id="ngo-name"
+                    name="ngo-name"
+                    placeholder="Enter NGO Name"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="ngo-address-line1">Address Line 1:</label>
+                <input
+                    id="ngo-address-line1"
+                    type="text"
+                    aria-label="Address Line 1"
+                    name="ngo-address-line1"
+                    placeholder="Address Line 1"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="ngo-address-line2">Address Line 2 (Location, City, Postal Code):</label>
+                <input
+                    id="ngo-address-line2"
+                    type="text"
+                    aria-label="Address Line 2"
+                    name="ngo-address-line2"
+                    placeholder="Location, City, Postal Code"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="ngo-reg-no">Registration No.:</label>
+                <input
+                    id="ngo-reg-no"
+                    type="text"
+                    aria-label="NGO Registration No."
+                    name="ngo-reg-no"
+                    placeholder="Enter Registration No."
+                    required/>
+            </div>
+            <div class="form-group">
+                <label for="working-areas">Working Areas:</label>
+                <textarea
+                    id="working-areas"
+                    name="working-areas"
+                    placeholder="Enter Working Areas"
+                    rows="1"
+                    maxlength="50"
+                    required
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="purpose">Purpose:</label>
+                <textarea
+                    id="purpose"
+                    name="purpose"
+                    placeholder="Enter Purpose"
+                    rows="1"
+                    maxlength="50"
+                    required
+                ></textarea>
+            </div>
+        </form>
+    </div>
+    <div>
+        <!-- You can add a button here to submit the NGO registration form -->
+        <button class="bubbly-button" onclick="submitNGORegistrationForm()">Submit</button>
+    </div>
+    <div class="my-form__row2">
+        <span>If You are a User</span>
+        <a href="/html/6.1 signup.html" title="Reset Password">Register Here</a>
+      </div>
+</div>
+
+<footer>
+    <a href="/html/1. home.html">Go to Home</a>
+</footer>
+<!-- You can include your login.js script here -->
+<script src="/js/4. login.js"></script>
+</body>
+</html>

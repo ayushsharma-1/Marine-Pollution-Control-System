@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mulish;
+}
+h1{
+    color: #084544;
+    font-size: 3rem;
+    padding-bottom: 20px;
+  }
+body {
+    background: linear-gradient(to bottom, #0077cc, #4caf50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#loginForm {
+    border: 10px solid transparent;
+    background: linear-gradient(to bottom, #7bb37d, #599bcb);
+    background-clip: padding-box;
+    border-radius: 3rem;
+    padding-bottom: 1rem;
+    padding-right: 1.8rem;
+    opacity: 0.9;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+    border: 1px solid var(--primary);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px var(--aura);
+    min-width: 280px;
+    max-width: 460px;
+    width: 100%;
+    padding: 32px;
+}
+
+.login-welcome {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.login-welcome-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bubbly-button1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    height: 60px;
+    width: 140px;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-left: 130px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    background-color: #00fffc;
+    box-shadow: 0 2px 25px #00fffc;
+}
+
+.bubbly-button1 a {
+    text-decoration: none;
+}
+
+.bubbly-button1:focus {
+    outline: 0;
+}
+
+.bubbly-button1:before,
+.bubbly-button1:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+.bubbly-button1:before {
+    display: none;
+}
+
+.bubbly-button1:after {
+    display: none;
+}
+
+.bubbly-button1:active {
+    transform: scale(0.9);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+.my-form__row3 span {
+    margin-right: 50px;
+}
+
+.my-form__row3 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.my-form__row3 a {
+    text-decoration: none;
+}
+
+.otp-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.otp-box {
+    width: 80px; /* Adjust the width of the square boxes */
+    height: 60px; /* Adjust the height of the square boxes */
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #599bcb;
+    color: #7bb37d;
+    border-radius: 8px;
+    outline: none;
+}
+    </style>
+</head>
+
+<body>
+    <div id="loginForm">
+        <div class="centering">
+            <form class="my-form" onsubmit="return verifyOTP();">
+                <div class="login-welcome-row">
+                    <h1>OTP Verification</h1>
+                </div>
+                <div class="otp-container">
+                    <input type="text" maxlength="1" class="otp-box" id="otp1" oninput="moveToNext(this, 'otp2')" required>
+                    <input type="text" maxlength="1" class="otp-box" id="otp2" oninput="moveToNext(this, 'otp3')" required>
+                    <input type="text" maxlength="1" class="otp-box" id="otp3" oninput="moveToNext(this, 'otp4')" required>
+                    <input type="text" maxlength="1" class="otp-box" id="otp4" oninput="moveToNext(this)" required>
+                </div>
+                <div>
+                    <button class="bubbly-button1">Verify OTP</button>
+                </div>
+                <div class="my-form__row3">
+                    <span>Did you not receive the OTP?</span>
+                    <a href="./otp-verify.html" title="Resend OTP">Resend OTP</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function moveToNext(currentInput, nextInputId) {
+            const maxLength = parseInt(currentInput.getAttribute('maxlength'));
+            const currentLength = currentInput.value.length;
+
+            if (currentLength === maxLength) {
+                if (nextInputId) {
+                    const nextInput = document.getElementById(nextInputId);
+                    if (nextInput) {
+                        nextInput.focus();
+                    }
+                } else {
+                    currentInput.blur(); // Optionally blur the last input
+                }
+            }
+        }
+
+        function verifyOTP() {
+            // Implement your verification logic here
+            return false; // Prevent form submission for testing purposes
+        }
+    </script>
+    <script src="./login.js"></script>
+</body>
+
+</html>
